@@ -275,9 +275,7 @@ const translations = {
      .project-text, .project-img,
      .box, .s-box,
      .btn, .connect-text,
-     .contact-box, .nizar-card,
-     .patrizio-card, .simone-card,
-     .sky-card, .updates-text,
+     .contact-box, .updates-text,
      .scroll-arrow`,
     { interval: 200 }
   );
