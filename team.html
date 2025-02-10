@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF92D1BKLK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FF92D1BKLK');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="skychasers,cansat,space,skychasers team,manzetti,aosta,aerospace">
+  <meta name="description" content="Discover more about our team!">
+
+
+  <title>Skychasers</title>
+  <!-- Box Icons -->
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <!-- FontAwsone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Link To CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Flavicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./Images/flavicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./Images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./Images/flavicon/favicon-16x16.png" />
+  <link rel="manifest" href="./Images/flavicon/site.webmanifest" />
+</head>
+<body>
+  <!-- Header / Main Navigation -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <!-- Logo + Home Link -->
+      <div class="logo-container">
+        <a href="index.html" class="logo" aria-label="Skychasers Home">
+          <img src="./Images/Logo_no_background/Skychasers-removebg-preview.webp" alt="Skychasers Icon" class="logo-icon"/>
+          SKYCHASERS
+        </a>
+      </div>
+
+      <!-- Menu Toggle Button (mobile) -->
+      <button
+        class="bx bx-menu"
+        id="menu-icon"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="navbar"
+      ></button>
+
+      <!-- Main Menu -->
+      <ul class="navbar" id="navbar">
+        <li><a href="how-it-works.html" data-translate="howItWorks" class="nav-item">Mission</a></li>
+        <li><a href="team.html" data-translate="team" class="nav-item">Team</a></li>
+        <li><a href="raptor-flight-computer.html" data-translate="raptor" class="nav-item">Raptor</a></li>
+        <li><a href="updates.html" data-translate="updates" class="nav-item">Updates</a></li>
+        <li><a href="#contact" data-translate="contacts" class="nav-item">Contacts</a></li>
+
+        <!-- Language Selector -->
+        <li class="language-selector">
+          <!-- Button that toggles the language sub-menu -->
+          <button
+            class="bx bx-globe"
+            id="language-icon"
+            aria-label="Choose Language"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="language-menu"
+          ></button>
+          <!-- Submenu: Language Options -->
+          <ul class="language-menu" id="language-menu">
+            <li data-lang="en">English</li>
+            <li data-lang="it">Italiano</li>
+            <li data-lang="de">Deutsch</li>
+            <li data-lang="es">Español</li>
+            <li data-lang="fr">Français</li>
+          </ul>
+        </li>
+
+        <!-- Dark Mode Toggle -->
+        <li>
+          <button
+            class="bx bx-moon"
+            id="darkmode"
+            aria-label="Toggle Dark Mode"
+          ></button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <main>
+    <section class="home" id="home">
+      <div class="home-text">
+        <h1>TEAM</h1>
+        <h2 data-translate="teamSubHead">DISCOVER MORE ABOUT OUT TEAM!</h2>
+      </div>
+      <div class="home-img">
+        <img src="" alt="" />
+      </div>
+    <div class="scroll-arrow"></div>
+    </section>
+
+    <!-- Team Sliding Windows -->
+    <div class="container swiper" id="swiper">
+      <div class="slider-wrapper">
+        <div class="card-list swiper-wrapper">
+          <!-- Patrizio -->
+          <div class="card-item swiper-slide patrizio-card">
+            <img
+              src="./Images/team/aloisio/aloisio-2.webp"
+              alt="Photo of Patrizio Aloisio"
+              class="user-image"
+            />
+            <h2 class="user-name">Patrizio Aloisio</h2>
+            <p class="user-profession" data-translate="patrizioProfession">Mentor</p>
+            <a href="patrizio.html">
+              <button class="learn-more" data-translate="teamLearnMore">Learn More</button>
+            </a>
+          </div>
+
+          <!-- Nizar -->
+          <div class="card-item swiper-slide nizar-card">
+            <img
+              src="./Images/team/nizar/nizar-4.webp"
+              alt="Photo of Nizar Souit"
+              class="user-image"
+            />
+            <h2 class="user-name">Nizar Souit</h2>
+            <p class="user-profession">Project Manager</p>
+            <a href="nizar.html">
+              <button class="learn-more" data-translate="teamLearnMore">Learn More</button>
+            </a>
+          </div>
+
+          <!-- Simone -->
+          <div class="card-item swiper-slide simone-card">
+            <img
+              src="./Images/team/simone/simone-3.webp"
+              alt="Photo of Simone Florio"
+              class="user-image"
+            />
+            <h2 class="user-name">Simone Florio</h2>
+            <p class="user-profession" data-translate="simoneSubHead">COM Engineer</p>
+            <a href="simone.html">
+              <button class="learn-more" data-translate="teamLearnMore">Learn More</button>
+            </a>
+          </div>
+
+          <!-- Sky -->
+          <div class="card-item swiper-slide sky-card">
+            <img
+              src="./Images/team/sky/sky-2.webp"
+              alt="Photo of Sky Jiang"
+              class="user-image"
+            />
+            <h2 class="user-name">Sky Jiang</h2>
+            <p class="user-profession" data-translate="skySubHead">Software Engineer</p>
+            <a href="sky.html">
+              <button class="learn-more" data-translate="teamLearnMore">Learn More</button>
+            </a>
+          </div>
+
+          <!-- Filippo -->
+          <div class="card-item swiper-slide filippo-card">
+            <img
+              src="./Images/team/filippo/filippo-5.webp"
+              alt="Photo of Filippo Marrari"
+              class="user-image"
+            />
+            <h2 class="user-name">Filippo Marrari</h2>
+            <p class="user-profession">Social Media Manager</p>
+            <a href="filippo.html">
+              <button class="learn-more" data-translate="teamLearnMore">Learn More</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Swiper Buttons -->
+        <div class="swiper-slide-button swiper-button-prev" aria-label="Previous"></div>
+        <div class="swiper-slide-button swiper-button-next" aria-label="Next"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="contact-box">
+      <h3>Skychasers</h3>
+      <span data-translate="followUs">Follow Us</span>
+      <div class="social">
+        <a target="_blank" href="https://www.youtube.com/@skychasers_cansat"><i class="fa-brands fa-youtube"></i></a>
+        <a target="_blank" href="https://x.com/skychasersspace"><i class="fa-brands fa-x-twitter"></i></a> <!-- Icona X -->
+        <a target="_blank" href="https://www.instagram.com/skychasers_cansat/"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+   
+
+    <div class="contact-box">
+      <h3>Menu Links</h3>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="how-it-works.html" data-translate="howItWorks">Mission</a></li>
+      <li><a href="team.html" data-translate="team">Team</a></li>
+      <li><a href="raptor-flight-computer.html" data-translate="raptor">Raptor Flight Computer</a></li>
+      <li><a href="updates.html" data-translate="updates">Updates</a></li>
+    </div>
+    <div class="contact-box address">
+      <h3 data-translate="contacts">Contact</h3>
+      <i class="bx bxs-map"><span data-translate="position">Aosta Valley, Italy</span></i>
+      <i class="bx bxs-envelope"><span>skychasers.cansat@gmail.com</span></i>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="copyright">
+    <p>SKYCHASERS © 2025</p>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Scroll Reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Linking SwiperJS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Linking Sliding Script -->
+  <script src="script_team.js"></script>
+  <!-- Link To Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
