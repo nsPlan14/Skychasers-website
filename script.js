@@ -284,7 +284,7 @@ const translations = {
      .box, .s-box,
      .btn, .connect-text,
      .contact-box, .updates-text,
-     .scroll-arrow`,
+     .scroll-arrow, .card-list`, 
     { interval: 200 }
   );
   
