@@ -17,27 +17,13 @@ async function salvaNome() {
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Chiamare la funzione check_ip_count per sapere quanti nomi esistono per questo IP
-  const { data: countResult, error: rpcError } = await supabaseClient
-    .rpc("check_ip_count", { the_ip: ip });
+  // Ottenere la data attuale in formato UTC (TIMESTAMPTZ)
+  const nowUTC = new Date().toISOString(); // Formato: 'YYYY-MM-DDTHH:MM:SS.sssZ'
 
-  if (rpcError) {
-    console.error("Errore nel controllo IP:", rpcError);
-    alert("Errore durante il controllo IP.");
-    return;
-  }
-
-  const ipCount = countResult; // Il valore ritornato dalla funzione
-
-  if (ipCount >= 5) {
-    alert("Hai già inserito il massimo numero di nomi consentiti (5).");
-    return;
-  }
-
-  // Inserire il nome e l'IP nel database
+  // Inserire il nome, l'IP e la data UTC nel database
   const { data, error } = await supabaseClient
     .from("nomi")
-    .insert([{ nome: nomeInput, ip_address: ip }]);
+    .insert([{ nome: nomeInput, ip_address: ip, data_salvataggio: nowUTC }]);
 
   if (error) {
     console.error("Errore nel salvataggio:", error);
