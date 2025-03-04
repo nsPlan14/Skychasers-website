@@ -14,22 +14,28 @@ async function salvaNome() {
     return;
   }
 
-  // Ottieni l'IP dell'utente
+  // Ottenere l'IP dell'utente
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Controlla quanti inserimenti ha già fatto questo IP
+  // Controllare quanti nomi ha già inserito questo IP
   const { data, error } = await supabaseClient
     .from("nomi")
-    .select("id")
+    .select("id", { count: "exact" })  // Conta esattamente quanti record ci sono
     .eq("ip_address", ip);
+
+  if (error) {
+    console.error("Errore nel controllo IP:", error);
+    alert("Errore durante il controllo IP.");
+    return;
+  }
 
   if (data.length >= 5) {
     alert("Hai già inserito il massimo numero di nomi consentiti.");
     return;
   }
 
-  // Inserisce il nome e l'IP nel database
+  // Inserire il nome e l'IP nel database
   const { insertData, insertError } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput, ip_address: ip }]);
@@ -42,4 +48,3 @@ async function salvaNome() {
     document.getElementById("nome").value = ""; // Resetta il campo
   }
 }
-
