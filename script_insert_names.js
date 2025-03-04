@@ -19,9 +19,9 @@ async function salvaNome() {
   const { ip } = await response.json();
 
   // Controllare quanti nomi ha già inserito questo IP
-  const { data, error } = await supabaseClient
+  const { count, error } = await supabaseClient
     .from("nomi")
-    .select("id", { count: "exact" })  // Conta esattamente quanti record ci sono
+    .select("*", { count: "exact", head: true }) // Conta i record SENZA restituirli
     .eq("ip_address", ip);
 
   if (error) {
@@ -30,7 +30,7 @@ async function salvaNome() {
     return;
   }
 
-  if (data.length >= 5) {
+  if (count >= 5) { // Se l'IP ha già inserito 5 nomi, blocchiamo l'invio
     alert("Hai già inserito il massimo numero di nomi consentiti.");
     return;
   }
@@ -48,3 +48,4 @@ async function salvaNome() {
     document.getElementById("nome").value = ""; // Resetta il campo
   }
 }
+
