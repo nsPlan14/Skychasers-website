@@ -14,16 +14,17 @@ async function salvaNome() {
     return;
   }
 
-  // Insert the name in the database
+  // Inserisce il nome nel database
   const { data, error } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput }]);
 
   if (error) {
     console.error("Errore nel salvataggio:", error);
-    alert("Errore nel salvataggio del nome.");
+    alert("Errore nel salvataggio del nome: " + error.message);
   } else {
     alert("Nome salvato con successo!");
-    document.getElementById("nome").value = ""; // reset the fiedl
+    document.getElementById("nome").value = ""; // Resetta il campo
   }
 }
+
