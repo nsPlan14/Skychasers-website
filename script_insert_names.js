@@ -2,7 +2,7 @@ const { createClient } = supabase;
 
 // Configure Supabase
 const supabaseUrl = "https://rxsbzajqlqtanegpwnze.supabase.co";
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4c2J6YWpxbHF0YW5lZ3B3bnplIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDEwNjAwMDgsImV4cCI6MjA1NjYzNjAwOH0.9aF724obCLlOk5yIqIqrfh3pkPuXlxC6A-3YQd85ibU";
+const supabaseAnonKey = "LA_TUA_ANON_KEY";
 const supabaseClient = createClient(supabaseUrl, supabaseAnonKey);
 
 // Function to save a name
@@ -18,17 +18,35 @@ async function salvaNome() {
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Inserire il nome e l'IP nel database
-  const { data, error } = await supabaseClient
+  // 1. Controllare quanti nomi ha già inserito questo IP
+  const { count, error: selectError } = await supabaseClient
+    .from("nomi")
+    // Il trucco è usare { count: "exact", head: true } per ottenere SOLO il conteggio
+    .select("*", { count: "exact", head: true })
+    .eq("ip_address", ip);
+
+  if (selectError) {
+    console.error("Errore nel controllo IP:", selectError);
+    alert("Errore durante il controllo IP.");
+    return;
+  }
+
+  // 2. Se l'IP ha già inserito 5 nomi, blocchiamo l'invio
+  if (count >= 5) {
+    alert("Hai già inserito il massimo numero di nomi consentiti (5).");
+    return;
+  }
+
+  // 3. Se l'IP non ha raggiunto il limite, inseriamo il nome e l'IP nel database
+  const { data, error: insertError } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput, ip_address: ip }]);
 
-  if (error) {
-    console.error("Errore nel salvataggio:", error);
-    alert("Errore: " + error.message); // Ora vedremo l'errore esatto se l'IP è bloccato
+  if (insertError) {
+    console.error("Errore nel salvataggio:", insertError);
+    alert("Errore: " + insertError.message);
   } else {
     alert("Nome salvato con successo!");
     document.getElementById("nome").value = ""; // Resetta il campo
   }
 }
-
