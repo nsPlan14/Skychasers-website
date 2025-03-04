@@ -18,31 +18,14 @@ async function salvaNome() {
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Controllare quanti nomi ha già inserito questo IP
-  const { count, error } = await supabaseClient
-    .from("nomi")
-    .select("*", { count: "exact", head: true }) // Conta i record SENZA restituirli
-    .eq("ip_address", ip);
-
-  if (error) {
-    console.error("Errore nel controllo IP:", error);
-    alert("Errore durante il controllo IP.");
-    return;
-  }
-
-  if (count >= 5) { // Se l'IP ha già inserito 5 nomi, blocchiamo l'invio
-    alert("Hai già inserito il massimo numero di nomi consentiti.");
-    return;
-  }
-
   // Inserire il nome e l'IP nel database
-  const { insertData, insertError } = await supabaseClient
+  const { data, error } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput, ip_address: ip }]);
 
-  if (insertError) {
-    console.error("Errore nel salvataggio:", insertError);
-    alert("Errore nel salvataggio del nome.");
+  if (error) {
+    console.error("Errore nel salvataggio:", error);
+    alert("Errore: " + error.message); // Ora vedremo l'errore esatto se l'IP è bloccato
   } else {
     alert("Nome salvato con successo!");
     document.getElementById("nome").value = ""; // Resetta il campo
