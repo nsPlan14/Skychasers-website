@@ -14,18 +14,18 @@ async function salvaNome() {
     return;
   }
 
-  // Ottieni l'IP dell'utente usando un servizio esterno
+  // Ottenere l'IP dell'utente
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Salva il nome e l'IP nel database
+  // Inserire il nome e l'IP nel database
   const { data, error } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput, ip_address: ip }]);
 
   if (error) {
     console.error("Errore nel salvataggio:", error);
-    alert("Errore nel salvataggio del nome.");
+    alert("Errore nel salvataggio del nome: " + error.message);
   } else {
     alert("Nome salvato con successo!");
     document.getElementById("nome").value = ""; // Resetta il campo
