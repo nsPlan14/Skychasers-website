@@ -23,7 +23,7 @@ async function salvaNome() {
   // Inserire il nome, l'IP e la data UTC nel database
   const { data, error } = await supabaseClient
     .from("nomi")
-    .insert([{ nome: nomeInput, ip_address: ip, data_salvataggio: nowUTC }]);
+    .insert([{ nome: nomeInput, ip_address: ip, time_save: nowUTC }]);
 
   if (error) {
     console.error("Errore nel salvataggio:", error);
