@@ -14,20 +14,32 @@ async function salvaNome() {
     return;
   }
 
-  // Ottenere l'IP dell'utente
+  // Ottieni l'IP dell'utente
   const response = await fetch("https://api64.ipify.org?format=json");
   const { ip } = await response.json();
 
-  // Inserire il nome e l'IP nel database
+  // Controlla quanti inserimenti ha già fatto questo IP
   const { data, error } = await supabaseClient
+    .from("nomi")
+    .select("id")
+    .eq("ip_address", ip);
+
+  if (data.length >= 5) {
+    alert("Hai già inserito il massimo numero di nomi consentiti.");
+    return;
+  }
+
+  // Inserisce il nome e l'IP nel database
+  const { insertData, insertError } = await supabaseClient
     .from("nomi")
     .insert([{ nome: nomeInput, ip_address: ip }]);
 
-  if (error) {
-    console.error("Errore nel salvataggio:", error);
-    alert("Errore nel salvataggio del nome: " + error.message);
+  if (insertError) {
+    console.error("Errore nel salvataggio:", insertError);
+    alert("Errore nel salvataggio del nome.");
   } else {
     alert("Nome salvato con successo!");
     document.getElementById("nome").value = ""; // Resetta il campo
   }
 }
+
