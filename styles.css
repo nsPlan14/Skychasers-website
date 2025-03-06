@@ -254,6 +254,8 @@ section {
 }
 
 .btn {
+  border: none !important;
+  outline: none;
   display: inline-block;
   background: var(--main-color);
   padding: 10px 20px;
@@ -302,7 +304,44 @@ section {
   color: #fff;
 }
 
-.project {
+.launch-name-home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.launch-name-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./Images/background/dark-stars.webp") no-repeat center;
+  background-size: 100%;
+  filter: brightness(50%); /* Applica il filtro solo all'immagine */
+  z-index: 1; /* Metti l'immagine sotto il contenuto */
+}
+
+.launch-name-text {
+  text-align: center;
+  z-index: 2; /* Porta il contenuto sopra l'immagine */
+}
+
+.launch-name-home h1 {
+  font-size: var(--big-font);
+  color: var(--main-color);
+}
+
+.launch-name-home h2 {
+  color: #fff;
+}
+
+.project, .send {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -319,11 +358,25 @@ section {
   font-weight: 500;
 }
 
+.send-text span {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
 .project-text h2 {
   font-size: var(--h2-font);
 }
 
+.send-text h2 {
+  font-size: var(--h2-font);
+}
+
 .project-text p {
+  line-height: 1.5;
+  margin: 0.8rem 0 1.8rem;
+}
+
+.send-text p {
   line-height: 1.5;
   margin: 0.8rem 0 1.8rem;
 }
@@ -506,7 +559,32 @@ section {
   transform: translateX(-50%) rotate(-135deg); 
 }
 
-/* Simple bouncing animation to grab attention */
+/* Name insert form */
+.name-input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 50vh; /* Center vertically */
+}
+
+.name-input-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+#nome {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* bouncing animation to grab attention */
 @keyframes bounce {
   0%, 100% {
     transform: translateX(-50%) translateY(0);
@@ -527,7 +605,7 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1119px) {
   section {
     padding: 50px 8%;
   }
@@ -539,7 +617,7 @@ section {
 
   .navbar {
     position: absolute;
-    top: -450px;
+    top: -500px;
     left: 0;
     right: 0;
     flex-direction: column;
@@ -575,7 +653,7 @@ section {
     background-size: 200%;
   }
 
-  .project {
+  .project, .send {
     grid-template-columns: 1fr;
     text-align: center;
   }
