@@ -595,7 +595,7 @@ section {
 }
 
 /* Responsive Media Queries */
-@media (max-width: 921px) {
+@media (max-width: 1119px) {
   header {
     padding: 14px 41px;
   }

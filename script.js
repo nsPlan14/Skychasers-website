@@ -41,6 +41,9 @@ const translations = {
     submitName: "Submit",
     sendYourName: "SEND YOUR NAME<br>WITH US",
     sendNameDescription: "By participating with us, your name will be <b>written on our CanSat</b>, representing the support and enthusiasm of those who believe in science, technology and space challenges. It is a way to make your mark, to be <b>part of a journey</b> that transcends physical boundaries and embraces curiosity and innovation.",
+    thirtyMarTwoFive:"MARCH 31, 2025",
+    headNoRocket: "NO ROCKET THIS YEAR",
+    teamThirdUpdate: "We have an important update to share with you: the CanSat launch scheduled in Bologna will not take place, due to the unavailability of the flight area. After evaluating various alternatives, the organizers have decided to move the competition to Turin, at the planetarium.<br> What’s changing?<br> The event will now take place in static mode, without a launch, but with stationary  remote measurements. For further updates, stay tuned!"
   },
 
     it: {
@@ -84,7 +87,11 @@ const translations = {
     enterName: "Inserisci il tuo Nome",
     submitName: "Invia",
     sendYourName: "INVIA IL TUO NOME<br>CON NOI",
-    sendNameDescription: "Partecipando con noi, il tuo nome sarà <b>scritto sul nostro CanSat</b>, rappresentando il supporto e l'entusiasmo di coloro che credono nella scienza, nella tecnologia e nelle sfide spaziali. È un modo per lasciare il segno, per essere <b>parte di un viaggio</b> che trascende i confini fisici e abbraccia la curiosità e l'innovazione."  
+    sendNameDescription: "Partecipando con noi, il tuo nome sarà <b>scritto sul nostro CanSat</b>, rappresentando il supporto e l'entusiasmo di coloro che credono nella scienza, nella tecnologia e nelle sfide spaziali. È un modo per lasciare il segno, per essere <b>parte di un viaggio</b> che trascende i confini fisici e abbraccia la curiosità e l'innovazione."  ,
+    thirtyMarTwoFive:"31 MARZO, 2025",
+    headNoRocket: "NIENTE RAZZO QUEST'ANNO",
+    teamThirdUpdate: "Abbiamo un’importante novità da condividere con voi: il lancio del CanSat previsto a Bologna non avrà luogo, a causa della mancata disponibilità del parco volo. Dopo aver valutato diverse alternative, l’organizzazione ha deciso di trasferire la competizione a Torino, presso il planetario.<br> Cosa cambia?<br> L’evento si svolgerà in modalità statica, senza lancio, ma con misurazioni a distanza da fermo. Restate sintonizzati per ulteriori aggiornamenti!"
+  
   },
   de: {
     howItWorks: "Mission",
@@ -127,7 +134,10 @@ const translations = {
     enterName: "Gib deinen Namen ein",
     submitName: "Absenden",
     sendYourName: "SCHICK DEINEN NAMEN<br>MIT UNS",
-    sendNameDescription: "Indem du mit uns teilnimmst, wird dein Name <b>auf unserem CanSat geschrieben</b>, als Zeichen der Unterstützung und Begeisterung für Wissenschaft, Technologie und Raumfahrt-Herausforderungen. Es ist eine Möglichkeit, deine Spuren zu hinterlassen und <b>Teil einer Reise</b> zu sein, die physische Grenzen überwindet und Neugier sowie Innovation vereint."  
+    sendNameDescription: "Indem du mit uns teilnimmst, wird dein Name <b>auf unserem CanSat geschrieben</b>, als Zeichen der Unterstützung und Begeisterung für Wissenschaft, Technologie und Raumfahrt-Herausforderungen. Es ist eine Möglichkeit, deine Spuren zu hinterlassen und <b>Teil einer Reise</b> zu sein, die physische Grenzen überwindet und Neugier sowie Innovation vereint.",  
+    thirtyMarTwoFive: "31. MÄRZ 2025",
+    headNoRocket: "DIESES JAHR KEINE RAKETE",
+    teamThirdUpdate: "Wir haben ein wichtiges Update für euch: Der in Bologna geplante CanSat-Start wird nicht stattfinden, da das Fluggelände nicht verfügbar ist. Nach der Prüfung verschiedener Alternativen haben die Veranstalter beschlossen, den Wettbewerb nach Turin ins Planetarium zu verlegen.<br>Was ändert sich?<br>Die Veranstaltung findet nun im statischen Modus statt, ohne Raketenstart, aber mit stationären Fernmessungen. Bleibt für weitere Updates dran!"
   },
   fr: {
     howItWorks: "Mission",
@@ -170,7 +180,10 @@ const translations = {
     enterName: "Entrez votre Nom",
     submitName: "Soumettre",
     sendYourName: "ENVOYEZ VOTRE NOM<br>AVEC NOUS",
-    sendNameDescription: "En participant avec nous, votre nom sera <b>inscrit sur notre CanSat</b>, représentant le soutien et l'enthousiasme de ceux qui croient en la science, la technologie et les défis spatiaux. C'est une façon de laisser votre empreinte, d'être <b>partie d'un voyage</b> qui transcende les frontières physiques et embrasse la curiosité et l'innovation."
+    sendNameDescription: "En participant avec nous, votre nom sera <b>inscrit sur notre CanSat</b>, représentant le soutien et l'enthousiasme de ceux qui croient en la science, la technologie et les défis spatiaux. C'est une façon de laisser votre empreinte, d'être <b>partie d'un voyage</b> qui transcende les frontières physiques et embrasse la curiosité et l'innovation.",
+    thirtyMarTwoFive: "31 MARS 2025",
+    headNoRocket: "PAS DE FUSÉE CETTE ANNÉE",
+    teamThirdUpdate: "Nous avons une mise à jour importante à vous communiquer : le lancement du CanSat prévu à Bologne n’aura pas lieu, en raison de l’indisponibilité de la zone de vol. Après avoir évalué différentes alternatives, les organisateurs ont décidé de déplacer la compétition à Turin, au planétarium.<br>Qu’est-ce qui change ?<br>L’événement se déroulera désormais en mode statique, sans lancement, mais avec des mesures à distance stationnaires. Pour d’autres mises à jour, restez connectés !"
   },
   es: {
     howItWorks: "Misión",
@@ -199,7 +212,7 @@ const translations = {
     teamLearnMore: "Más información",
     updatesHomeHead: "ACTUALIZACIONES",
     scrollSubHead: "DESPLAZA HACIA ABAJO",
-    twentyJanTwoFive: "20 DE ENERO DE 2025",
+    twentyJanTwoFive: "20 ENERO 2025",
     headTeamAccept: "SELECCIONADOS PARA EL CANSAT<br>2024-2025",
     teamFirstUpdate: "¡Estamos encantados y honrados de anunciar que nuestro equipo ha sido <b>seleccionado</b> para la competencia italiana CanSat 2024-2025! Este es un <b>momento muy especial</b> porque demuestra nuestro arduo trabajo tras <b>meses de planificación</b>, y estamos seguros de que <b>no decepcionaremos las expectativas</b>, llevando nuestro proyecto a una conclusión exitosa. Ahora nos esperan meses de diseño avanzado y pruebas, tratando de identificar cualquier problema que pueda surgir en el futuro. Gracias a todos por su confianza. ¡Nos vemos en Bolonia!",
     simoneDesc: "Apasionado por la <b>programación</b> y la <b>ingeniería práctica</b>, Simone es responsable de la <b>comunicación del satélite</b> y el <b>desarrollo de software</b> en el proyecto CanSat. Trabaja para garantizar una comunicación fluida entre el CanSat y la <b>estación terrestre</b>. Su rol consiste en desarrollar el software que procesa y transmite los datos de telemetría, permitiendo el monitoreo y análisis en tiempo real del rendimiento del satélite. Combinando habilidades técnicas con un enfoque DIY, contribuye a la innovación y resolución de problemas necesarios para una misión CanSat exitosa.",
@@ -213,7 +226,10 @@ const translations = {
     enterName: "Introduce tu Nombre",
     submitName: "Enviar",
     sendYourName: "ENVÍA TU NOMBRE<br>CON NOSOTROS",
-    sendNameDescription: "Al participar con nosotros, tu nombre será <b>escrito en nuestro CanSat</b>, representando el apoyo y el entusiasmo de quienes creen en la ciencia, la tecnología y los desafíos espaciales. Es una forma de dejar tu huella, de ser <b>parte de un viaje</b> que trasciende las fronteras físicas y abraza la curiosidad y la innovación."
+    sendNameDescription: "Al participar con nosotros, tu nombre será <b>escrito en nuestro CanSat</b>, representando el apoyo y el entusiasmo de quienes creen en la ciencia, la tecnología y los desafíos espaciales. Es una forma de dejar tu huella, de ser <b>parte de un viaje</b> que trasciende las fronteras físicas y abraza la curiosidad y la innovación.",
+    thirtyMarTwoFive: "31 MARZO 2025",
+    headNoRocket: "NO HAY COHETE ESTE AÑO",
+    teamThirdUpdate: "Tenemos una actualización importante que compartir con ustedes: el lanzamiento del CanSat previsto en Bolonia no se llevará a cabo, debido a la indisponibilidad del área de vuelo. Tras evaluar varias alternativas, los organizadores han decidido trasladar la competencia a Turín, en el planetario.<br>¿Qué cambia?<br>El evento se realizará ahora en modo estático, sin lanzamiento, pero con mediciones remotas estacionarias. ¡Sigan atentos para más actualizaciones!"
   },
   };
   
