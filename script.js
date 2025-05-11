@@ -91,7 +91,10 @@ const translations = {
     thirtyMarTwoFive:"31 MARZO, 2025",
     headNoRocket: "NIENTE RAZZO QUEST'ANNO",
     teamThirdUpdate: "Abbiamo un’importante novità da condividere con voi: il lancio del CanSat previsto a Bologna non avrà luogo, a causa della mancata disponibilità del parco volo. Dopo aver valutato diverse alternative, l’organizzazione ha deciso di trasferire la competizione a Torino, presso il planetario.<br> Cosa cambia?<br> L’evento si svolgerà in modalità statica, senza lancio, ma con misurazioni a distanza da fermo. Restate sintonizzati per ulteriori aggiornamenti!"
-  
+    ,twelveAprTwoFive: "12 APRILE, 2025"
+    ,teamFourthUpdate: "Il nostro progetto finisce giornale! Il quotidiano locale <i>La Vallée</i> ha dedicato un articolo al nostro team e al progetto CanSat, riconoscendo l’impegno, la passione e il lavoro che stiamo portando avanti. Siamo orgogliosi di vedere la nostra esperienza raccontata e condivisa con tutta la comunità. Un grande incoraggiamento per continuare a dare il massimo!"
+    ,teamFifthUpdate: "Nuovo traguardo per il nostro team: Sponsorizzazione con Cogne Acciai Speciali!<br>Siamo entusiasti di annunciare che Cogne Acciai Speciali è ufficialmente uno dei nostri sponsor per il progetto CanSat 2024-2025! Questa collaborazione rappresenta un importante riconoscimento per il lavoro e la passione che stiamo dedicando al nostro satellite in miniatura. Il supporto di una realtà industriale di eccellenza come Cogne ci darà la spinta giusta per affrontare al meglio le prossime fasi del progetto, dalla progettazione al lancio. Un enorme grazie a Cogne per credere nei giovani, nella scienza e nell’innovazione! Restate connessi per tutti gli aggiornamenti della missione"
+
   },
   de: {
     howItWorks: "Mission",
